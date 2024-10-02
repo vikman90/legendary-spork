@@ -252,6 +252,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#agent-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Architecture
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -408,6 +417,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#agent-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Architecture
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -443,6 +461,20 @@
 <li><strong>Low resource consumption</strong>: Optimized to work efficiently on different hardware platforms, from servers to IoT devices.</li>
 </ul>
 <p>The Wazuh Agent is an essential part of the Wazuh security platform, helping organizations detect and respond to security threats in a scalable manner.</p>
+<h2 id="agent-architecture">Agent Architecture</h2>
+<pre class="mermaid"><code>graph TD
+    FIM(FIM)
+    Inventory(Inventory)
+    Logcollector(Logcollector)
+    Queue(Queue)
+    Communicator(Communicator)
+    CommandHandler(Command Handler)
+
+    FIM --&gt; Queue
+    Inventory --&gt; Queue
+    Logcollector --&gt; Queue
+    Queue --&gt; Communicator
+    Communicator --&gt; CommandHandler</code></pre>
 
 
 
