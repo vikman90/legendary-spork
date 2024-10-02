@@ -1,2 +1,4 @@
 site_name: Wazuh Agent Documentation
 
+theme:
+  name: material

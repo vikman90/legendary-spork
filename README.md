@@ -7,11 +7,12 @@ This is a temporary PoC: https://vikman90.github.io/legendary-spork
 ### Requirements
 
 - mkdocs
+- mkdocs material
 
 Install with PIP:
 
 ```shell
-pip3 install mkdocs
+pip3 install mkdocs mkdocs-material
 ```
 
 ### Build documentation
