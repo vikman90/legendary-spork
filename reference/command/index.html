@@ -369,7 +369,7 @@
         
   
   <span class="md-ellipsis">
-    Settings file
+    Agent Configuration
   </span>
   
 
@@ -469,16 +469,16 @@
 <li><strong>ossec.conf</strong>: The main configuration file for the Wazuh Agent. It defines the agent’s behavior, including monitored paths, server connections, and active response rules.</li>
 </ul>
 <p>Example configuration block:
-  <code>xml
-  &lt;agent&gt;
-    &lt;server&gt;
-      &lt;address&gt;192.168.1.100&lt;/address&gt;
-      &lt;port&gt;1514&lt;/port&gt;
-      &lt;protocol&gt;udp&lt;/protocol&gt;
-    &lt;/server&gt;
-    &lt;notify_time&gt;10&lt;/notify_time&gt;
-    &lt;disable_reconnect&gt;no&lt;/disable_reconnect&gt;
-  &lt;/agent&gt;</code></p>
+  <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;agent&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&lt;server&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;address&gt;</span>192.168.1.100<span class="nt">&lt;/address&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;port&gt;</span>1514<span class="nt">&lt;/port&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;protocol&gt;</span>udp<span class="nt">&lt;/protocol&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">&lt;/server&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">&lt;notify_time&gt;</span>10<span class="nt">&lt;/notify_time&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">&lt;disable_reconnect&gt;</span>no<span class="nt">&lt;/disable_reconnect&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">&lt;/agent&gt;</span>
+</span></code></pre></div></p>
 <ul>
 <li><strong>agent.conf</strong>: The agent-specific configuration for customizing behavior per agent installation.</li>
 </ul>
@@ -487,17 +487,18 @@
 <li><strong>agent-control</strong>: A command-line utility to control and manage the Wazuh Agent.</li>
 </ul>
 <p>Common commands:
-  <code>bash
-  /var/ossec/bin/agent-control -s    # Show agent status
-  /var/ossec/bin/agent-control -r    # Restart the agent</code></p>
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/var/ossec/bin/agent-control<span class="w"> </span>-s<span class="w">    </span><span class="c1"># Show agent status</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>/var/ossec/bin/agent-control<span class="w"> </span>-r<span class="w">    </span><span class="c1"># Restart the agent</span>
+</span></code></pre></div></p>
 <h2 id="logging">Logging</h2>
 <p>Wazuh Agent logs all its operations in the following files:</p>
 <ul>
 <li><strong>ossec.log</strong>: Primary log file located in <code>/var/ossec/logs/ossec.log</code> on Linux/macOS or <code>C:\Program Files (x86)\ossec-agent\logs\ossec.log</code> on Windows.</li>
 </ul>
 <p>Example log entries:
-  <code>2024/09/30 12:30:45 ossec-agent: INFO: Agent started successfully.
-  2024/09/30 12:35:10 ossec-agent: WARNING: Connection to the manager failed.</code></p>
+  <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2024/09/30 12:30:45 ossec-agent: INFO: Agent started successfully.
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>2024/09/30 12:35:10 ossec-agent: WARNING: Connection to the manager failed.
+</span></code></pre></div></p>
 <h2 id="useful-links">Useful Links</h2>
 <ul>
 <li><a href="https://documentation.wazuh.com/current/">Wazuh Documentation</a></li>
@@ -549,7 +550,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
